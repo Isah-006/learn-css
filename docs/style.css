@@ -1,0 +1,128 @@
+:root {
+  --responsiveUnit: calc(1vmin + 1vmax);
+  --dynamicHeight: 100vh;
+
+  --text: #ffffff;
+  --wall: #000000;
+
+  --primary: #3880ff;
+  --secondary: #3dc2ff;
+  --tertiary: #5260ff;
+  --success: #2dd36f;
+  --warning: #ffc409;
+  --danger: #eb445a;
+  --dark: #222428;
+  --medium: #92949c;
+  --light: #f4f5f8;
+  --black: #000000;
+  --white: #ffffff;
+
+  --headerHeight: calc(var(--responsiveUnit) *  10);
+  --footerHeight: calc(var(--responsiveUnit) * 10);
+  --mainHeight: calc(var(--dynamicHeight) - var(--headerHeight) - var(--footerHeight));
+}
+
+@supports (height: 100dvh) {
+  :root {
+    --dynamicHeight: 100dvh;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* min-height: 0; */
+  min-width: 0;
+}
+
+html,
+body {
+  height: var(--dynamicHeight);
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+  background-color: var(--wall);
+  text-align: center;
+  font-family: monospace;
+}
+
+header,
+footer {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  min-height: var(--headerHeight);
+  border-bottom: calc(var(--responsiveUnit) * 0.1) solid var(--light);
+}
+
+footer {
+  min-height: var(--footerHeight);
+  border-top: calc(var(--responsiveUnit) * 0.1) solid var(--light);
+}
+
+main {
+  min-height: var(--mainHeight);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+a {
+  color: var(--tertiary);
+}
+
+span#heart {
+  color: var(--danger);
+}
+
+h1 {
+  font-size: calc(var(--responsiveUnit) * 2);
+}
+
+h2 {
+  font-size: calc(var(--responsiveUnit) * 1);
+}
+
+@media (orientation: portrait) {
+  :root {
+    --headerHeight: calc(var(--responsiveUnit) * 4);
+    --footerHeight: calc(var(--responsiveUnit) * 6);
+  }
+
+  h1 {
+    font-size: calc(var(--responsiveUnit) * 3);
+  }
+
+  h2 {
+    font-size: calc(var(--responsiveUnit) * 2);
+  }
+}
+
+button {
+  padding: 100px;
+  /* width: 20px; */
+  padding-right: 0;
+margin-bottom: 10px;
+color: #eb445a;
+border: 5px solid #2dd36f;
+transition:all 1ms ease;
+}
+
+button:hover {box-shadow: 0px 0px 20px 10px  #5260ff;
+}
+
+button:active {transform:scale(99)};
+
+.botaovermei{background: blue !important;}
+#pretao{background: blue !important;}
