@@ -98,6 +98,7 @@ h2 {
   bottom: 110px;
   left: 65%;
   transform: translateX(-50%);
+  z-index: 1;
 }
 
 .circulo {
@@ -112,6 +113,7 @@ h2 {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
 }
 
 .circuloMenor {
@@ -133,23 +135,23 @@ h2 {
 }
 
 .rotated-0 {
-  transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-40%, -82%) rotate(0deg);
 }
 
 .rotated-72 {
-  transform: translate(-50%, -50%) rotate(72deg);
+  transform: translate(-80%, -55%) rotate(296deg);
 }
 
 .rotated-144 {
-  transform: translate(-50%, -50%) rotate(144deg);
+  transform: translate(-15%, -7%) rotate(140deg);
 }
 
 .rotated-216 {
-  transform: translate(-50%, -50%) rotate(216deg);
+  transform: translate(-64%, -6%) rotate(215deg);
 }
 
 .rotated-288 {
-  transform: translate(-50%, -50%) rotate(288deg);
+  transform: translate(-2%, -56%) rotate(67deg);
 }
 
 @media (orientation: portrait) {
