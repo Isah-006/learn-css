@@ -121,6 +121,40 @@ h2 {
   border-radius: 50%;
 }
 
+.triangulo {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid darkblue;
+  position: relative;
+}
+
+.triangulo::before,
+.triangulo::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: darkblue;
+  border-radius: 50%;
+}
+
+.triangulo::before {
+  top: -15px;
+  left: -15px;
+}
+
+.triangulo::after {
+  top: -15px;
+  right: -15px;
+}
+
+.triangulo::after {
+  bottom: -15px;
+  left: calc(50% - 15px);
+}
+
 
 
 @media (orientation: portrait) {
