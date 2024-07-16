@@ -35,7 +35,7 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--text);
-  background-color: white;
+  background-color: var(--wall);
   text-align: center;
   font-family: monospace;
 }
@@ -83,21 +83,42 @@ h2 {
   font-size: calc(var(--responsiveUnit) * 1);
 }
 
+.circulo-container {
+  position: relative;
+  width: 150px;
+  height: 200px;
+}
+
 .circulo {
-  width: 80px;
-  height: 80px;
-  background-color: rgb(10, 10, 64);
+  width: 150px;
+  height: 150px;
+  background-color: darkblue;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .circuloMenor {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   background-color: white;
   border-radius: 50%;
+}
+
+.rastro {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(220, 58, 22);
+  clip-path: polygon(38% 93%, 0% 100%, 39% 100%);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media (orientation: portrait) {
