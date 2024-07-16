@@ -84,8 +84,8 @@ h2 {
 }
 
 .circulo {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background-color: darkblue;
   border-radius: 50%;
   display: flex;
@@ -94,8 +94,8 @@ h2 {
 }
 
 .circuloMenor {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   background-color: white;
   border-radius: 50%;
 }
