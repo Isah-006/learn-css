@@ -116,7 +116,7 @@ h2 {
   background-color: rgb(220, 58, 22);
   clip-path: polygon(38% 93%, 0% 100%, 39% 100%);
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
