@@ -119,13 +119,38 @@ h2 {
   height: 45px;
   background-color: white;
   border-radius: 50%;
+  position: relative;
 }
 
 .triangulo {
-  width: 40px;
-  height: 40px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  fill:  rgb(8, 8, 91);
 }
 
+.rotated-0 {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.rotated-72 {
+  transform: translate(-50%, -50%) rotate(72deg);
+}
+
+.rotated-144 {
+  transform: translate(-50%, -50%) rotate(144deg);
+}
+
+.rotated-216 {
+  transform: translate(-50%, -50%) rotate(216deg);
+}
+
+.rotated-288 {
+  transform: translate(-50%, -50%) rotate(288deg);
+}
 
 @media (orientation: portrait) {
   :root {
