@@ -35,7 +35,7 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--text);
-  background-color: var(--wall);
+  background-color: white;
   text-align: center;
   font-family: monospace;
 }
@@ -86,7 +86,7 @@ h2 {
 .circulo {
   width: 80px;
   height: 80px;
-  background-color: darkblue;
+  background-color: rgb(10, 10, 64);
   border-radius: 50%;
   display: flex;
   align-items: center;
