@@ -89,6 +89,17 @@ h2 {
   height: 200px;
 }
 
+.rastro {
+  width: 220px;
+  height: 160px;
+  background-color: rgb(220, 58, 22);
+  clip-path: polygon(38% 93%, 0% 100%, 39% 100%);
+  position: absolute;
+  bottom: 70px;
+  left: 65%;
+  transform: translateX(-50%);
+}
+
 .circulo {
   width: 90px;
   height: 90px;
@@ -110,16 +121,7 @@ h2 {
   border-radius: 50%;
 }
 
-.rastro {
-  width: 220px;
-  height: 160px;
-  background-color: rgb(220, 58, 22);
-  clip-path: polygon(38% 93%, 0% 100%, 39% 100%);
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 
 @media (orientation: portrait) {
   :root {
