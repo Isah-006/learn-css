@@ -3,7 +3,7 @@
   --dynamicHeight: 100vh;
 
   --text: #ffffff;
-  --wall: #000000;
+  --wall: #ffffff;
 
 
   --headerHeight: calc(var(--responsiveUnit) *  10);
@@ -35,7 +35,7 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--text);
-  background-color: var(--wall);
+  background-color: white;
   text-align: center;
   font-family: monospace;
 }
@@ -90,9 +90,9 @@ h2 {
 }
 
 .circulo {
-  width: 150px;
-  height: 150px;
-  background-color: darkblue;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(8, 8, 91);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -104,15 +104,15 @@ h2 {
 }
 
 .circuloMenor {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background-color: white;
   border-radius: 50%;
 }
 
 .rastro {
-  width: 150px;
-  height: 50px;
+  width: 220px;
+  height: 160px;
   background-color: rgb(220, 58, 22);
   clip-path: polygon(38% 93%, 0% 100%, 39% 100%);
   position: absolute;
