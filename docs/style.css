@@ -84,8 +84,8 @@ h2 {
 }
 
 .circulo {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background-color: darkblue;
   border-radius: 50%;
   display: flex;
