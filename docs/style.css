@@ -87,6 +87,7 @@ h2 {
   position: relative;
   width: 150px;
   height: 200px;
+  animation: moveContainer 5s linear infinite;
 }
 
 .rastro {
@@ -117,7 +118,7 @@ h2 {
   transform: translateX(-50%);
   z-index: 2;
   opacity: 0;
-  animation: fadeInCirculo 1s forwards;
+  animation: fadeInCirculo 1s forwards, rotateCirculo 5s linear infinite;
 }
 
 .circuloMenor {
@@ -137,6 +138,7 @@ h2 {
   left: 40%;
   transform-origin: center center;
   fill:  rgb(8, 8, 91);
+  animation: rotateTriangulo 5s linear infinite;
 }
 
 .rotated-0 {
@@ -198,5 +200,38 @@ h2 {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCirculo {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes rotateTriangulo {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes moveContainer {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 100%;
   }
 }
