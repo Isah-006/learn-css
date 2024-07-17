@@ -126,7 +126,7 @@ h2 {
   background-color: white;
   border-radius: 50%;
   position: relative;
-  animation: rotateTrianguloContainer 10s linear infinite 1s;
+  animation: rotateCirculoMenor 10s linear infinite 1s;
 }
 
 .triangulo {
@@ -137,6 +137,7 @@ h2 {
   left: 40%;
   transform-origin: center center;
   fill: rgb(8, 8, 91);
+  animation: rotateTriangulo 10s linear infinite 1s;
 }
 
 .rotated-0 {
