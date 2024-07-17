@@ -194,11 +194,8 @@ h2 {
   50% {
     opacity: 1;
   }
-  70% {
-    opacity: 0;
-  }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
