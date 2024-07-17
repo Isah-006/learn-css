@@ -137,17 +137,18 @@ h2 {
   left: 40%;
   transform-origin: center center;
   fill: rgb(8, 8, 91);
-
 }
 
 .retangulo {
-  width: 200px;
-  height: 100px;
-  background-color: white;
+  width: 130px;
+  height: 400px;
+  background-color: black;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 70%;
   transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
 }
 
 .rotated-0 {
