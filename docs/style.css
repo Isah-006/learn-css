@@ -5,7 +5,6 @@
   --text: #ffffff;
   --wall: #ffffff;
 
-
   --headerHeight: calc(var(--responsiveUnit) *  10);
   --footerHeight: calc(var(--responsiveUnit) * 10);
   --mainHeight: calc(var(--dynamicHeight) - var(--headerHeight) - var(--footerHeight));
@@ -87,7 +86,7 @@ h2 {
   position: relative;
   width: 150px;
   height: 200px;
-  animation: moveContainer 5s linear infinite;
+  animation: moveContainer 10s linear infinite;
 }
 
 .rastro {
@@ -101,7 +100,7 @@ h2 {
   transform: translateX(-50%);
   z-index: 1;
   opacity: 0;
-  animation: fadeInRastro 1s 1s forwards;
+  animation: fadeInRastro 1s 5s forwards;
 }
 
 .circulo {
@@ -118,7 +117,7 @@ h2 {
   transform: translateX(-50%);
   z-index: 2;
   opacity: 0;
-  animation: fadeInCirculo 1s forwards, rotateCirculo 5s linear infinite;
+  animation: fadeInCirculo 1s forwards, rotateCirculo 5s linear infinite 1s;
 }
 
 .circuloMenor {
@@ -127,7 +126,7 @@ h2 {
   background-color: white;
   border-radius: 50%;
   position: relative;
-  animation: rotateCirculoMenor 5s linear infinite;
+  animation: rotateTrianguloContainer 10s linear infinite 1s;
 }
 
 .triangulo {
@@ -137,8 +136,7 @@ h2 {
   top: 40%;
   left: 40%;
   transform-origin: center center;
-  fill:  rgb(8, 8, 91);
-  animation: rotateTriangulo 5s linear infinite;
+  fill: rgb(8, 8, 91);
 }
 
 .rotated-0 {
@@ -224,14 +222,26 @@ h2 {
   }
 }
 
-@keyframes moveContainer {
+@keyframes rotateTrianguloContainer {
   0% {
-    left: 0;
+    transform: rotate(0deg);
   }
   50% {
-    left: 50%;
+    transform: rotate(180deg);
   }
   100% {
-    left: 100%;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveContainer {
+  0% {
+    left: -10%;
+  }
+  70% {
+    left: 60%;
+  }
+  100% {
+    left: 110%;
   }
 }
