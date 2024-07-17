@@ -86,7 +86,7 @@ h2 {
   position: relative;
   width: 150px;
   height: 200px;
-  animation: moveContainer 5s linear infinite;
+  animation: moveContainer 3s linear infinite;
 }
 
 .rastro {
@@ -137,7 +137,7 @@ h2 {
   left: 40%;
   transform-origin: center center;
   fill: rgb(8, 8, 91);
-  animation: rotateTriangulo 10s cubic-bezier(0.5, 0, 1, 1) infinite;
+
 }
 
 .rotated-0 {
@@ -219,7 +219,7 @@ h2 {
     transform: translate(-50%, -50%) rotate(180deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(720deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
