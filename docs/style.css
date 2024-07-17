@@ -140,6 +140,16 @@ h2 {
 
 }
 
+.retangulo {
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .rotated-0 {
   transform: translate(-40%, -82%) rotate(0deg);
 }
