@@ -140,12 +140,12 @@ h2 {
 }
 
 .retangulo {
-  width: 130px;
+  width: 400px;
   height: 400px;
   background-color: black;
   position: absolute;
   top: 40%;
-  left: 70%;
+  left: 83%;
   transform: translate(-50%, -50%);
   z-index: 2;
   opacity: 0;
