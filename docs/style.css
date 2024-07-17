@@ -20,7 +20,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
   min-width: 0;
 }
 
@@ -86,7 +85,7 @@ h2 {
   position: relative;
   width: 150px;
   height: 200px;
-  animation: moveContainer 3s linear infinite;
+  animation: moveContainer 10s linear infinite;
 }
 
 .rastro {
@@ -100,7 +99,7 @@ h2 {
   transform: translateX(-50%);
   z-index: 1;
   opacity: 0;
-  animation: trail 3s infinite;
+  animation: fadeInOutRastro 6s linear infinite;
 }
 
 .circulo {
@@ -116,7 +115,8 @@ h2 {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  animation: jump 3s ease-in-out infinite;
+  opacity: 0;
+  animation: bounceIn 3s ease-in-out infinite, rotateCirculo 5s linear infinite 1s;
 }
 
 .circuloMenor {
@@ -125,7 +125,7 @@ h2 {
   background-color: white;
   border-radius: 50%;
   position: relative;
-  animation: spin 2s linear infinite;
+  animation: rotateTrianguloContainer 10s linear infinite 1s;
 }
 
 .triangulo {
@@ -136,6 +136,7 @@ h2 {
   left: 40%;
   transform-origin: center center;
   fill: rgb(8, 8, 91);
+  animation: rotateTriangulo 10s cubic-bezier(0.5, 0, 1, 1) infinite;
 }
 
 .rotated-0 {
@@ -173,30 +174,104 @@ h2 {
   }
 }
 
-@keyframes trail {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
+@keyframes fadeInCirculo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-@keyframes jump {
-  0% { transform: scale(0); }
-  50% { transform: scale(1.5); }
-  100% { transform: scale(1); }
+@keyframes fadeInOutRastro {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+@keyframes bounceIn {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(-50%) scale(1.3);
+  }
+  50% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(-50%) scale(0.8);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateCirculoMenor {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCirculo {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes rotateTriangulo {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(720deg);
+  }
+}
+
+@keyframes rotateTrianguloContainer {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes moveContainer {
   0% {
-    left: 0%;
+    left: -10%;
   }
   70% {
-    left: 0%;
+    left: 60%;
   }
   100% {
-    left: 20%;
+    left: 110%;
   }
 }
