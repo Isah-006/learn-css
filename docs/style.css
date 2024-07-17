@@ -20,6 +20,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
   min-width: 0;
 }
 
@@ -116,7 +117,7 @@ h2 {
   transform: translateX(-50%);
   z-index: 2;
   opacity: 0;
-  animation: bounceIn 3s ease-in-out infinite, rotateCirculo 5s linear infinite 1s;
+  animation: fadeInCirculo 1s forwards, rotateCirculo 3s linear infinite 1s;
 }
 
 .circuloMenor {
@@ -125,7 +126,7 @@ h2 {
   background-color: white;
   border-radius: 50%;
   position: relative;
-  animation: rotateTrianguloContainer 10s linear infinite 1s;
+  animation: rotateTrianguloContainer 5s linear infinite 1s;
 }
 
 .triangulo {
@@ -136,6 +137,7 @@ h2 {
   left: 40%;
   transform-origin: center center;
   fill: rgb(8, 8, 91);
+
 }
 
 .rotated-0 {
@@ -200,27 +202,6 @@ h2 {
   }
 }
 
-@keyframes bounceIn {
-  0%, 100% {
-    transform: translateX(-50%) scale(1);
-    opacity: 1;
-  }
-  20% {
-    transform: translateX(-50%) scale(1.3);
-  }
-  50% {
-    transform: translateX(-50%) scale(1);
-    opacity: 1;
-  }
-  80% {
-    transform: translateX(-50%) scale(0.8);
-  }
-  100% {
-    transform: translateX(-50%) scale(1);
-    opacity: 1;
-  }
-}
-
 @keyframes rotateCirculoMenor {
   from {
     transform: rotate(0deg);
@@ -247,7 +228,7 @@ h2 {
     transform: translate(-50%, -50%) rotate(180deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(720deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
