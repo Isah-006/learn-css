@@ -85,7 +85,7 @@ h2 {
   position: relative;
   width: 150px;
   height: 200px;
-  animation: moveContainer 10s linear infinite;
+  animation: moveContainer 3s linear infinite;
 }
 
 .rastro {
@@ -99,7 +99,7 @@ h2 {
   transform: translateX(-50%);
   z-index: 1;
   opacity: 0;
-  animation: fadeInOutRastro 6s linear infinite;
+  animation: fadeInOutRastro 3s linear infinite;
 }
 
 .circulo {
