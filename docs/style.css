@@ -237,12 +237,12 @@ h2 {
 
 @keyframes moveContainer {
   0% {
-    left: -10%;
+    left: -1%;
   }
   70% {
-    left: 60%;
+    left: 10%;
   }
   100% {
-    left: 110%;
+    left: 20%;
   }
 }
