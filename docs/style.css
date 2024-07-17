@@ -100,7 +100,7 @@ h2 {
   transform: translateX(-50%);
   z-index: 1;
   opacity: 0;
-  animation: fadeInRastro 1s 3s forwards;
+  animation: fadeInOutRastro 3s linear infinite;
 }
 
 .circulo {
@@ -184,12 +184,21 @@ h2 {
   }
 }
 
-@keyframes fadeInRastro {
-  from {
+@keyframes fadeInOutRastro {
+  0% {
     opacity: 0;
   }
-  to {
+  20% {
     opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
