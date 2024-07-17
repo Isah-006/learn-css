@@ -189,16 +189,18 @@ h2 {
     opacity: 0;
   }
   20% {
-    opacity: 1;
+    opacity: 0;
   }
   50% {
+    opacity: 1;
+  }
+  70% {
     opacity: 1;
   }
   100% {
     opacity: 1;
   }
 }
-
 
 @keyframes rotateCirculoMenor {
   from {
