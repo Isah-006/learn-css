@@ -127,7 +127,7 @@ h2 {
   background-color: white;
   border-radius: 50%;
   position: relative;
-  animation: rotateTrianguloContainer 3s linear(0 0%, 0 56.62%, 1.36 101.47%) infinite 1s
+  animation: rotateTrianguloContainer 3s linear(0 0%, 0 56.62%, 1.36 101.47%) infinite 2s
 }
 
 .triangulo {
@@ -204,7 +204,7 @@ h2 {
     opacity: 0;
   }
   70% {
-    opacity: 1;
+    opacity: 0;
   }
   100% {
     opacity: 1;
@@ -245,20 +245,8 @@ h2 {
   0% {
     transform: rotate(0deg);
   }
-  25% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(0deg);
-  }
-  85% {
-    transform: rotate(0deg);
-  }
   100% {
-    transform: rotate(500deg);
+    transform: rotate(800deg);
   }
 }
 
