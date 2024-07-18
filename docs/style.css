@@ -86,7 +86,7 @@ h2 {
   position: relative;
   width: 150px;
   height: 200px;
-  animation: moveContainer 3s linear infinite;
+  animation: moveContainer 3s linear(0 0%, -0 46.32%, 0.85 94.12%) infinite
 }
 
 .rastro {
@@ -113,12 +113,12 @@ h2 {
   justify-content: center;
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 22%;
   transform: translateX(-50%);
   z-index: 2;
-  opacity: 0;
-  animation: jump 3s ease-in-out infinite;
-  animation-delay: 4s;
+  opacity: 1;
+  animation: jump 3s cubic-bezier(0.79, 0.07, 0.14, 1.03) infinite;
+  animation-delay: 3s;
 }
 
 .circuloMenor {
@@ -189,7 +189,7 @@ h2 {
 
 @keyframes jump {
   0% { transform: scale(0); }
-  50% { transform: scale(1.5); }
+  50% { transform: scale(1); }
   100% { transform: scale(1); }
 }
 
@@ -201,7 +201,7 @@ h2 {
     opacity: 0;
   }
   50% {
-    opacity: 1;
+    opacity: 0;
   }
   70% {
     opacity: 1;
@@ -245,8 +245,14 @@ h2 {
   0% {
     transform: rotate(0deg);
   }
+  25% {
+    transform: rotate(0deg);
+  }
   50% {
     transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
   }
   100% {
     transform: rotate(360deg);
