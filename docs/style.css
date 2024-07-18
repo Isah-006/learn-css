@@ -127,7 +127,7 @@ h2 {
   background-color: white;
   border-radius: 50%;
   position: relative;
-  animation: rotateTrianguloContainer 5s linear infinite 1s;
+  animation: rotateTrianguloContainer 3s linear(0 0%, 0 56.62%, 1.36 101.47%) infinite 1s
 }
 
 .triangulo {
